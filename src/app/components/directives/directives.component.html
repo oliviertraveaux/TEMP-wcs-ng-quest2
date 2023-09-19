@@ -8,13 +8,15 @@
   <li>Chou-fleur</li>
 </ul>
 
-<ul *ngIf="isGuestListDisplayed">
+<ul *appDisplayGuests="isGuestListDisplayed">
   <li>Brenda</li>
   <li>Dylan</li>
   <li>Michel Drucker</li>
   <li>Marc Aurèle</li>
   <li>Julie</li>
 </ul>
+
+<h1 appHighlight>Raclette</h1>
 
 <ul>
   <li *ngFor="let song of songList">

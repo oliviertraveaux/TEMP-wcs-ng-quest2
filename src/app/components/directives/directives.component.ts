@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class DirectivesComponent {
   title: string = 'Raclette party 🧀';
   isThisIngredientVital: boolean = false;
-  isGuestListDisplayed: boolean = true;
+  isGuestListDisplayed: boolean = false;
   songList: string[] = ['Alejandro', 'Ne me quitte pas', 'Le temps est bon'];
 }
