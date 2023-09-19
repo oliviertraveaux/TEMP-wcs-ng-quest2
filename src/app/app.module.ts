@@ -9,6 +9,9 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { ChallengeComponent } from './components/challenge/challenge.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DisplayGuestsDirective } from './directives/display-guests.directive';
+import { MoviesComponent } from './components/movies/movies.component';
+import { FirstMovieDirective } from './directives/first-movie.directive';
+import { MoviesVisibleDirective } from './directives/movies-visible.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { DisplayGuestsDirective } from './directives/display-guests.directive';
     ChallengeComponent,
     HighlightDirective,
     DisplayGuestsDirective,
+    MoviesComponent,
+    FirstMovieDirective,
+    MoviesVisibleDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
