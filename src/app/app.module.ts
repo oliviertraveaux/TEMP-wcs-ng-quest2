@@ -14,6 +14,7 @@ import { MoviesVisibleDirective } from './directives/movies-visible.directive';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MenuComponent } from './components/menu/menu.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MenuComponent } from './components/menu/menu.component';
     FirstMovieDirective,
     MoviesVisibleDirective,
     MenuComponent,
+    SignUpComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
