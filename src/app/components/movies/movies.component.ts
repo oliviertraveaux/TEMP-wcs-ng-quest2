@@ -7,5 +7,5 @@ import { Movie } from 'src/app/types/movie.interface';
   styleUrls: ['./movies.component.css'],
 })
 export class MoviesComponent {
-  public showMovies: boolean = false;
+  public showMovies: boolean = true;
 }

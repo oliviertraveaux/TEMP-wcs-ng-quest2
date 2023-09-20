@@ -1,7 +1,6 @@
 import { NgModule, Directive } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +11,9 @@ import { DisplayGuestsDirective } from './directives/display-guests.directive';
 import { MoviesComponent } from './components/movies/movies.component';
 import { FirstMovieDirective } from './directives/first-movie.directive';
 import { MoviesVisibleDirective } from './directives/movies-visible.directive';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { MoviesVisibleDirective } from './directives/movies-visible.directive';
     MoviesComponent,
     FirstMovieDirective,
     MoviesVisibleDirective,
+    MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
   bootstrap: [AppComponent],
 })
