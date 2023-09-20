@@ -1,0 +1,12 @@
+<div class="container">
+  <h2 class="mt-4">Voici {{ JeanMi.firstname }} {{ JeanMi.lastname }}</h2>
+  <ul class="list-group mt-3">
+    <li class="list-group-item">Age: {{ JeanMi.age }}</li>
+    <li class="list-group-item">Genre: {{ JeanMi.gender }}</li>
+    <li class="list-group-item">Bio: {{ JeanMi.bio }}</li>
+  </ul>
+  <div class="mt-4">
+    <h3>Compétences :</h3>
+    <app-skill [skills]="JeanMi.skills"></app-skill>
+  </div>
+</div>
