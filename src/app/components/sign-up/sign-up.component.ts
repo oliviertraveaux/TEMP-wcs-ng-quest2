@@ -7,7 +7,7 @@ import { User } from 'src/app/models/user.model';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
-  model: User = new User('', '', '', '');
+  model: User = new User('test', '', '', '');
 
   onSubmit(): void {
     console.log(this.model);

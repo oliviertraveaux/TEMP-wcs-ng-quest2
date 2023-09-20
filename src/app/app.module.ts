@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { ChallengeComponent } from './components/challenge/challenge.component';
 import { HighlightDirective } from './directives/highlight.directive';
@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MenuComponent } from './components/menu/menu.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SearchMoviesComponent } from './components/search-movies/search-movies.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,14 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     MoviesVisibleDirective,
     MenuComponent,
     SignUpComponent,
+    SearchMoviesComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(ROUTES),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

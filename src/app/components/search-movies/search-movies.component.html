@@ -1,0 +1,41 @@
+<form
+  #myForm="ngForm"
+  (ngSubmit)="searchForm.valid && onSubmit()"
+  [formGroup]="searchForm"
+>
+  <div formGroupName="id">
+    <div>
+      <label for="identifier">Identifiant :</label>
+      <input type="text" id="identifier" formControlName="identifier" />
+    </div>
+
+    <div>
+      <label for="title">Titre :</label>
+      <input type="text" id="title" formControlName="title" />
+    </div>
+    <div *ngIf="searchForm.get('id.title')?.hasError('required')">
+      <span>Le champ title est requis</span>
+    </div>
+  </div>
+
+  <div>
+    <label for="type">Type:</label>
+    <select id="type" formControlName="type">
+      <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="year">Année de sortie:</label>
+    <input type="number" id="year" formControlName="year" />
+  </div>
+
+  <div>
+    <label for="fiche">Fiche:</label>
+    <select id="fiche" formControlName="description">
+      <option *ngFor="let fiche of fiches" [value]="fiche">{{ fiche }}</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="!searchForm.valid">Soumettre</button>
+</form>
