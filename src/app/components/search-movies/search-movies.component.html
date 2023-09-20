@@ -1,0 +1,63 @@
+<div class="container d-flex flex-column align-items-center my-5">
+  <div class="col-6">
+    <form class="row" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <div formGroupName="infos" class="d-flex justify-content-between">
+        <mat-form-field>
+          <mat-label>identifier</mat-label>
+          <input matInput formControlName="id" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>title</mat-label>
+          <input matInput formControlName="title" />
+        </mat-form-field>
+      </div>
+      <mat-error *ngIf="isFieldInvalid('infos')">
+        Les champs identifier et title sont requis
+      </mat-error>
+
+      <mat-form-field>
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let type of movieTypes" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="isFieldInvalid('type')">
+          ce champ est requis
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Fiche</mat-label>
+        <mat-select
+          formControlName="fiche"
+          [disabled]="!searchForm.get('infos')?.valid"
+        >
+          <mat-option *ngFor="let fiche of fiches" [value]="fiche">
+            {{ fiche }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="isFieldInvalid('fiche')">
+          ce champ est requis
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Année de sortie</mat-label>
+        <input matInput formControlName="year" />
+        <mat-error *ngIf="isFieldInvalid('year')">
+          La date doit être comprise entre {{ minYear }} et {{ maxYear }}
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        class="w-100 mb-3"
+        color="primary"
+        mat-stroked-button
+        type="submit"
+      >
+        Save
+      </button>
+    </form>
+  </div>
+</div>
