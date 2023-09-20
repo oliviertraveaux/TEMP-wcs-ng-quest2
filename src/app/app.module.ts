@@ -15,6 +15,8 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MenuComponent } from './components/menu/menu.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DeveloperComponent } from './components/developer/developer.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     MoviesVisibleDirective,
     MenuComponent,
     SignUpComponent,
+    DeveloperComponent,
+    SkillComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
