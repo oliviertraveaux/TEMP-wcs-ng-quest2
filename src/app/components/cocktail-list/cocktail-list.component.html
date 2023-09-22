@@ -1,0 +1,19 @@
+<div class="container-fluid d-flex">
+  <div
+    *ngFor="let cocktail of cocktails; index as i; trackBy: trackByIndex"
+    class="card mx-2"
+    style="width: 18rem"
+  >
+    <img
+      class="card-img-top"
+      src="{{ cocktail.iamgeUrl }}"
+      alt="{{ cocktail.name }}"
+    />
+    <div class="card-body">
+      <h3 class="card-text">
+        {{ cocktail.name }}
+      </h3>
+      <p>{{ cocktail.price }} €</p>
+    </div>
+  </div>
+</div>

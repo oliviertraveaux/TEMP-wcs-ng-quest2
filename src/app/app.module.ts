@@ -17,6 +17,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DeveloperComponent } from './components/developer/developer.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SkillComponent } from './components/skill/skill.component';
     SignUpComponent,
     DeveloperComponent,
     SkillComponent,
+    CocktailListComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
