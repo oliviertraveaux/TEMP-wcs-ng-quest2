@@ -18,6 +18,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DeveloperComponent } from './components/developer/developer.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,12 @@ import { CocktailListComponent } from './components/cocktail-list/cocktail-list.
     SkillComponent,
     CocktailListComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CocktailService } from './../../services/cocktail.service';
+import { CocktailService } from 'src/app/services/cocktail.service';
 import { Cocktail } from 'src/app/types/cocktail.interface';
 
 @Component({
@@ -15,6 +15,10 @@ export class CocktailListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cocktails = this.cocktailService.getCocktails();
+    this.cocktailService
+      .getCocktails()
+      .subscribe(
+        (cocktailsMock: Cocktail[]) => (this.cocktails = cocktailsMock)
+      );
   }
 }
